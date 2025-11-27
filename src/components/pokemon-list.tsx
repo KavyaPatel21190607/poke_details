@@ -122,7 +122,6 @@ export function PokemonList({ onSelectPokemon, apiKey }: PokemonListProps) {
         <span className="text-gray-600">Go to page:</span>
         <input
           type="number"
-          min="1"
           max={totalPages}
           value={currentPage}
           onChange={(e) => {
