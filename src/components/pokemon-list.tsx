@@ -19,7 +19,7 @@ export function PokemonList({ onSelectPokemon, apiKey }: PokemonListProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [totalCount, setTotalCount] = useState(10000);
-  const itemsPerPage = 25;
+  const itemsPerPage = 20;
 
   useEffect(() => {
     fetchPokemon();
