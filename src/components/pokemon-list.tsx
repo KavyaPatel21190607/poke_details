@@ -19,7 +19,7 @@ export function PokemonList({ onSelectPokemon, apiKey }: PokemonListProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [totalCount, setTotalCount] = useState(10000);
-  const itemsPerPage = 20;
+  const itemsPerPage = 25;
 
   useEffect(() => {
     fetchPokemon();
@@ -29,7 +29,7 @@ export function PokemonList({ onSelectPokemon, apiKey }: PokemonListProps) {
     setLoading(true);
     try {
       const offset = (currentPage - 1) * itemsPerPage;
-      const url = `https://pokeapi.co/api/v2/pokemon?limit=${itemsPerPage}&offset=${offset}`;
+      const url = `https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0`;
       
       const response = await fetch(url);
       const data = await response.json();
