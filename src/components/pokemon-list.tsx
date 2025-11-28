@@ -29,7 +29,7 @@ export function PokemonList({ onSelectPokemon, apiKey }: PokemonListProps) {
     setLoading(true);
     try {
       const offset = (currentPage - 1) * itemsPerPage;
-      const url = `https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0`;
+      const url = `https://pokeapi.co/api/v2/pokemon?limit=10000&offset=${offset}`;
       
       const response = await fetch(url);
       const data = await response.json();
